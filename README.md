@@ -4,9 +4,9 @@
 
 ## By: **Tiffany Siu, Andrew Philpott, Andriy Veremyeyev**
 
-<!-- [![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive) -->
+<!-- [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip) -->
 
-[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+[![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
 ![LastCommit](https://img.shields.io/github/last-commit/Andrew-Philpott/farmers-market)
 ![Languages](https://img.shields.io/github/languages/top/Andrew-Philpott/farmers-market)
 [![MIT license](https://img.shields.io/badge/License-MIT-orange.svg)](https://lbesson.mit-license.org/)
@@ -33,9 +33,7 @@
 
 ## Description
 
-_README under construction_
-
-<!-- _Detailed desc w/ purpose/usage, what does, motivation to create, why exists, other info for users/developers to have_ -->
+Exercise for Epicodus' Intro to Programming and C#/React course to practice adding a local state to a React project. The local state will be used to toggle between components/views.
 
 ### Assignment Prompt
 
@@ -51,7 +49,7 @@ Once again, make sure to plan your application first and include a component dia
 
 ## Components Diagram
 
-<img style="width:600px" src="./public/img/farmers-market.jpg">
+<img style="width:600px" src="{process.env.PUBLIC_URL + './public/img/farmers-market.jpg'}"/>
 
 ## Setup/Installation Requirements
 
