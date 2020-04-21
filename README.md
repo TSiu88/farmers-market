@@ -7,8 +7,8 @@
 <!-- [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip) -->
 
 [![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
-![LastCommit](https://img.shields.io/github/last-commit/Andrew-Philpott/farmers-market)
-![Languages](https://img.shields.io/github/languages/top/Andrew-Philpott/farmers-market)
+![LastCommit](https://img.shields.io/github/last-commit/TSiu88/farmers-market)
+![Languages](https://img.shields.io/github/languages/top/TSiu88/farmers-market)
 [![MIT license](https://img.shields.io/badge/License-MIT-orange.svg)](https://lbesson.mit-license.org/)
 
 ---
@@ -65,7 +65,7 @@ Once again, make sure to plan your application first and include a component dia
 _This page may be viewed by:_
 
 1. Download and install Node.js from the [official website](https://nodejs.org/en/download/)
-2. Clone the [repository](https://github.com/Andrew-Philpott/farmers-market) from my [GitHub page](https://github.com/Andrew-Philpott)
+2. Clone the [repository](https://github.com/TSiu88/farmers-market) from my [GitHub page](https://github.com/TSiu88)
 3. Use a command line/Bash to move to the project directory with `cd project-directory`
 4. Run `npm install` to get all dependencies.
 5. Run `npm run start` to start up the program
@@ -114,7 +114,7 @@ _Here is a preview of what the output looks like:_
 
 ## Known Bugs
 
-_There are currently no known bugs in this program_
+_The produce list shows all items still and does not use state to only show one month at a time with buttons to toggle between them._
 
 ## Support and contact details
 
