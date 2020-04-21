@@ -1,68 +1,129 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# _Farmer's Market_
 
-## Available Scripts
+#### _Working with State in React Exercise, 04.21.2020_
 
-In the project directory, you can run:
+## By: **Tiffany Siu, Andrew Philpott, Andriy Veremyeyev**
 
-### `npm start`
+<!-- [![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive) -->
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+![LastCommit](https://img.shields.io/github/last-commit/Andrew-Philpott/farmers-market)
+![Languages](https://img.shields.io/github/languages/top/Andrew-Philpott/farmers-market)
+[![MIT license](https://img.shields.io/badge/License-MIT-orange.svg)](https://lbesson.mit-license.org/)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Table of Contents
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. [Description](#description)
+   - [Assignment Prompt](#assignment-prompt)
+2. [Component Diagram](#component-diagram)
+3. [Setup/Installation Requirements](#setup/installation-requirements)
+   - [Requirements to Run](#requirements-to-run)
+   - [Instructions](#instructions)
+   - [Other Technologies Used](#other-technologies-used)
+4. [Notable Features](#notable-features)
+5. [Specifications](#specifications)
+6. [Screenshots](#screenshots)
+7. [Known Bugs](#known-bugs)
+8. [Support and Contact Details](#support-and-contact-details)
+9. [License](#license)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Description
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+_README under construction_
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- _Detailed desc w/ purpose/usage, what does, motivation to create, why exists, other info for users/developers to have_ -->
 
-### `npm run eject`
+### Assignment Prompt
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Avery's Organics is a mid-sized farm in Northern Oregon that grows organic produce and sells it at farmers markets throughout town. Since Avery's is at a different market almost every day, they've started a website to show customers which market they will be at on a given day.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Avery's also grows different crops in different seasons. They'd like to display what produce is available during which months on their site too.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Using React and all other tools we've covered so far, create a website that depicts this information. The data you'll use is in the Cheat Sheet section of this lesson. Also, take time to construct your entire environment from scratch. It's important to practice these fundamentals before we increase the complexity of our projects later this week!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Try using local state to toggle between different days. Note that we can use conditional rendering for as many conditions as we want - including all seven days of the week!
 
-## Learn More
+Once again, make sure to plan your application first and include a component diagram in your README.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Components Diagram
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img style="width:600px" src="./public/img/farmers-market.jpg">
 
-### Code Splitting
+## Setup/Installation Requirements
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Requirements to Run
 
-### Analyzing the Bundle Size
+- _Web Browser_
+- _Webpack_
+- _Node.js_
+- _NPM_
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### Instructions
 
-### Making a Progressive Web App
+_This page may be viewed by:_
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+1. Download and install Node.js from the [official website](https://nodejs.org/en/download/)
+2. Clone the [repository](https://github.com/Andrew-Philpott/farmers-market) from my [GitHub page](https://github.com/Andrew-Philpott)
+3. Use a command line/Bash to move to the project directory with `cd project-directory`
+4. Run `npm install` to get all dependencies.
+5. Run `npm run start` to start up the program
 
-### Advanced Configuration
+### Other Technologies Used
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+- _HTML_
+- _CSS_
+- _Javascript_
+- _React_
+- _ESLint_
+- _Babel_
+- _Jest_
+- _Markdown_
 
-### Deployment
+## Notable Features
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+<!-- _features that make project stand out_ -->
 
-### `npm run build` fails to minify
+## Specifications
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<!-- <details>
+  <summary>Click to expand to view specifications</summary>
+
+| Specification | Input | Output |
+| :-------------     | :------------- | :------------- |
+| **The program displays welcome message and menu with prices** | Application start | Welcome message and menu displayed |
+| **The program displays special deals in readable format** | Application start | Special deals displayed ("Buy 2, get 1 free" "3 for $5") |
+| **The program takes input of user that is not an integer, then assume 0 ordered** | Bread="aaa", Pastry="" | Bread=0, Pastry=0 |
+| **The program takes number of loaves of bread and pastries and displays totals** | Bread=4, Pastry=4 | Bread=$20, Pastry=$8, Total=$28 |
+| **If input qualifies for special deals, costs calculated using discounted price** | Bread=3, Pastry=3 | Bread=$10, Pastry=$5, Total=$15 |
+
+</details> -->
+
+## Screenshots
+
+<!-- _Here is a snippet of what the input looks like:_
+
+![Snippet of input fields](img/snippet1.png)
+
+_Here is a preview of what the output looks like:_
+
+![Snippet of output box](img/snippet2.png) -->
+
+<!-- _{Show pictures using ![alt text](image.jpg), show what library does as concisely as possible but don't need to explain how project solves problem from `code`_ -->
+
+## Known Bugs
+
+_There are currently no known bugs in this program_
+
+## Support and contact details
+
+_If there are any question or concerns please contact us at our emails [Tiffany](mailto:tsiu88@gmail.com), [Andrew](mailto:#), and [Andriy](mailto:belyybrat@gmail.com). Thank you._
+
+### License
+
+_This software is licensed under the MIT license_
+
+Copyright (c) 2020 **_Tiffany Siu, Andrew Philpott, Andriy Veremyeyev_**
