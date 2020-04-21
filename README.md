@@ -49,7 +49,7 @@ Once again, make sure to plan your application first and include a component dia
 
 ## Components Diagram
 
-<img style="width:600px" src="{process.env.PUBLIC_URL + './public/img/farmers-market.jpg'}"/>
+<img style="width:600px" src="./FarmersMarket.jpg"/>
 
 ## Setup/Installation Requirements
 
