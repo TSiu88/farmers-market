@@ -1,7 +1,8 @@
 import React from "react";
 import ContactUsList from "./ContactUsList";
-import ContactUsButton from "./ContactUsButton";
+import { Button } from "@material-ui/core";
 import PropTypes from "prop-types";
+import { render } from "@testing-library/react";
 
 const buttonsStyle = {
   display: "flex",
@@ -34,6 +35,12 @@ const marketSchedule = [
     booth: "6D",
   },
   {
+    day: "Friday",
+    location: "Northwest Portland",
+    hours: "2:00pm - 6:00pm",
+    booth: "6D",
+  },
+  {
     day: "Saturday",
     location: "Beaverton",
     hours: "10:00am - 1:30pm",
@@ -51,63 +58,87 @@ class ContactUsControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      initialDateShown: "Monday",
-      // day: props.day,
-      // location: "Lents International",
-      // hours: "9:00am - 2:00pm",
-      // booth: "4A",
-    };
-  }
-
-  handleClick = ({ weekday }) => {
-    this.setState({ initialDateShown: { weekday } });
-  };
-
-  // handleMondayClick = () => {
-  //   this.setState({ initialDateShown: "Monday" });
-  // };
-
-  // handleTuesdayClick = () => {
-  //   this.setState({ initialDateShown: "Tuesday" });
-  // };
-
-  render() {
-    let currentDateShown = null;
-    let buttonText = null;
-    if (this.state.initialDateShown === "Monday") {
-      currentDateShown = (
+      initialDateShown: (
         <ContactUsList
           day={marketSchedule[0].day}
           location={marketSchedule[0].location}
           hours={marketSchedule[0].hours}
           booth={marketSchedule[0].booth}
-          // buttonText={marketSchedule[0].day}
         />
-      );
-    } else if (this.state.initialDateShown === "Tuesday") {
-      currentDateShown = (
+      ),
+    };
+  }
+
+  handleClick(day) {
+    let marketDay = marketSchedule[day];
+
+    this.setState({
+      initialDateShown: (
         <ContactUsList
-          day={marketSchedule[1].day}
-          location={marketSchedule[1].location}
-          hours={marketSchedule[1].hours}
-          booth={marketSchedule[1].booth}
-          buttonText={marketSchedule[1].day}
+          day={marketDay.day}
+          location={marketDay.location}
+          hours={marketDay.hours}
+          booth={marketDay.booth}
         />
-      );
-    }
+      ),
+    });
+  }
+
+  render() {
     return (
       <React.Fragment>
-        {currentDateShown}
-        ContactUsList(currentDateShown);
         <div style={buttonsStyle}>
-          {/* <button className="square" onClick={() => alert("click")}>
-            {this.state.initialDateShown}
-          </button> */}
-          <button onClick={this.handleClick("Monday")}>Monday</button>
-          <button onClick={this.handleClick("Tuesday")}>Tuesday</button>
-          {/* <button onClick={this.handleMondayClick()}>Monday</button>
-          <button onClick={this.handleTuesdayClick()}>Tuesday</button> */}
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => this.handleClick(0)}
+          >
+            {marketSchedule[0].day}
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => this.handleClick(1)}
+          >
+            {marketSchedule[1].day}
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => this.handleClick(2)}
+          >
+            {marketSchedule[2].day}
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => this.handleClick(3)}
+          >
+            {marketSchedule[3].day}
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => this.handleClick(4)}
+          >
+            {marketSchedule[4].day}
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => this.handleClick(5)}
+          >
+            {marketSchedule[5].day}
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => this.handleClick(6)}
+          >
+            {marketSchedule[6].day}
+          </Button>
         </div>
+        {this.state.initialDateShown}
       </React.Fragment>
     );
   }
