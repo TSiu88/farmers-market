@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Paper } from "@material-ui/core";
+import { Container, Paper, makeStyles } from "@material-ui/core";
 import ProduceButton from "./ProduceButton";
 import ProduceHeader from "./ProduceHeader";
 import ProduceList from "./ProduceList";
@@ -273,24 +273,37 @@ const availableProduce = [
     ],
   },
 ];
+const useStyles = makeStyles((theme) => ({
+  produceBorder: {
+    border: "2px solid red",
+  },
+  produceHeaderBorder: {
+    border: "2px solid green",
+  },
+  produceListBorder: {
+    border: "2px solid blue",
+  },
+}));
 
 function Produce() {
+  const classes = useStyles();
   return (
     <React.Fragment>
-      <Container>
-        <h1>Produce Available this Month:</h1>
+      <Container className={classes.produceBorder}>
+        <Container className={classes.produceHeaderBorder}>
+          <ProduceHeader />
+        </Container>
+        <Container className={classes.produceListBorder}>
+          {availableProduce.map((produce, index) => (
+            <ProduceList
+              month={produce.month}
+              selection={produce.selection}
+              key={index}
+            />
+          ))}
+        </Container>
+        <ProduceListButton />
       </Container>
-      <ProduceHeader />
-      <div>
-        {availableProduce.map((produce, index) => (
-          <ProduceList
-            month={produce.month}
-            selection={produce.selection}
-            key={index}
-          />
-        ))}
-      </div>
-      <ProduceListButton />
     </React.Fragment>
   );
 }

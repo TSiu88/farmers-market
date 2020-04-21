@@ -1,13 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Container } from "@material-ui/core";
 
 function ProduceList(props) {
   return (
     <React.Fragment>
-      <h2>{props.month}</h2>
-      {props.selection.map((item) => (
-        <p>{item}</p>
-      ))}
+      <Container>
+        <h2>{props.month}</h2>
+        {props.selection.map((item) => (
+          <p>{item}</p>
+        ))}
+      </Container>
     </React.Fragment>
   );
 }

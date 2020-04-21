@@ -1,13 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container, Button } from "@material-ui/core";
+import { Container, makeStyles, Button, Grid } from "@material-ui/core";
 
 function ContactUsButton(props) {
   return (
     <React.Fragment>
-      <Container>
-        <Button className={props.color}>{props.date}</Button>
-      </Container>
+      <Grid item xs={12}></Grid>
+      <Button className={props.color}>{props.date}</Button>
     </React.Fragment>
   );
 }
