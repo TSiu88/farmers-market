@@ -1,7 +1,7 @@
 import React from "react";
 
-function Header() {
+function ProduceButton() {
   return <React.Fragment></React.Fragment>;
 }
 
-export default Header;
+export default ProduceButton;
